@@ -1,0 +1,24 @@
+get_stock_anaysis:
+  description: >
+    Analyze the recent performance of the stock: {stock}. Use the live stock information tool to retrieve 
+        current price, percentage change, trading volume, and other market data. Provide a summary of how the stock 
+        is performing today and highlight any key observations from the data..
+  expected_output: >
+    "A clear, bullet-pointed summary of:\n"
+        "- Current stock price\n"
+        "- Daily price change and percentage\n"
+        "- Volume and volatility\n"
+        "- Any immediate trends or observations"
+  agent: trader_agent
+
+trade_decision:
+  description: >
+    "Use live market data and stock performance indicators for {stock} to make a strategic trading decision. "
+        "Assess key factors such as current price, daily change percentage, volume trends, and recent momentum. "
+        "Based on your analysis, recommend whether to **Buy**, **Sell**, or **Hold** the stock."
+  expected_output: >
+    "A clear and confident trading recommendation (Buy / Sell / Hold), supported by:\n"
+        "- Current stock price and daily change\n"
+        "- Volume and market activity observations\n"
+        "- Justification for the trading action based on technical signals or risk-reward outlook"
+  agent: trader_agent
